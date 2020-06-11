@@ -46,7 +46,7 @@ stages:
          docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/Library/Caches:/root/.cache/ aquasec/trivy --exit-code 1 --severity CRITICAL --ignore-unfixed $(containerRegistry)/$(imageRepository):$(tag)
 
 # Run a Bash script on macOS, Linux, or Windows
-- task: CmdKine@2
+- task: CmdLine@2
   displayName: Scan Finished
   inputs:
     script:
